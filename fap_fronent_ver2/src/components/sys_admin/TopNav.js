@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
+import { useNavigate } from 'react-router-dom';
 
 const TopNav = () => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchUserInfo = async () => {
@@ -32,7 +32,6 @@ const TopNav = () => {
 
     const handleSignOut = async () => {
         try {
-
             await axios.post(
                 'http://localhost:8080/fap/logout',
                 {},
@@ -67,7 +66,7 @@ const TopNav = () => {
                     <input
                         type="text"
                         placeholder="Search or type command..."
-                        className="pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                     <svg
                         className="w-5 h-5 text-gray-500 absolute left-3 top-1/2 transform -translate-y-1/2"
