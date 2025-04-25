@@ -75,7 +75,7 @@ public class LoginController {
 
         session.setAttribute("LOGIN_USER", accountDTO);
         Map<String, Object> response = new HashMap<>();
-        response.put("message", "Login successful");
+             response.put("message", "Login successful");
         response.put("role", accountDTO.getRole_id());
 
         switch (accountDTO.getRole_id()) {
